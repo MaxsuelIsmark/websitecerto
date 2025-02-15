@@ -1,0 +1,170 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D5AB5F;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaço entre a logo e os ícones */
+}
+
+
+header .logo {
+    max-width: 300px; /* Tamanho maior para a logo */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 70%;
+}
+
+/* Ícones de redes sociais */
+.social-nav {
+    margin-right: 70%;
+    display:flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-link {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: #007bff;
+    transform: translateY(-3px);
+}
+
+h1 {
+    color: #000;
+    font-family: Dancing Script, serif;
+    font-size: 90px;
+    position: relative; /* Permite posicionar o pseudo-elemento */
+    display: inline-block; /* Faz o h1 ocupar apenas o espaço do texto */
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 80vw; /* Ocupa 100% da largura da viewport */
+    height: 2px; /* Espessura da linha */
+    background-color: #ffffff; /* Cor da linha */
+    position: absolute;
+    left: 50%; /* Centraliza a linha */
+    transform: translateX(-50%); /* Ajusta o posicionamento */
+    bottom: -10px; /* Distância da linha em relação ao texto */
+}
+
+/* Grade de produtos */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produto-card {
+    background-color: #FBEBB8;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 8px 10px rgba(15, 14, 14, 0.382);
+    text-align: center;
+}
+
+.produto-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.produto-card p {
+    font-size: 1rem;
+    color: #FB700B;
+    margin-bottom: 15px;
+}
+
+.imagens-produto {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.imagem-pequena {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.imagem-pequena:hover {
+    transform: scale(1.1);
+}
+
+/* Botão do WhatsApp */
+.whatsapp-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #C93F13;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128c7e;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-conteudo {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.fechar-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.fechar-lightbox:hover {
+    color: #007bff;
+}

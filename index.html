@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ícones do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="imagens/logo2.png" alt="Logo da Loja" class="logo">
+        <!-- Ícones de redes sociais -->
+
+        <nav class="social-nav">
+            <a href="https://www.instagram.com/ismarkarts/" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61573089452809" target="_blank" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://tiktok.com/@sualoja" target="_blank" class="social-link">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://youtube.com/sualoja" target="_blank" class="social-link">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </nav>
+        <h1>Catálogo</h1>
+    </header>
+
+    <main>
+        <div class="produtos-grid">
+            <!-- Produto 1 -->
+            <div class="produto-card">
+                <div class="imagens-produto">
+                    <img src="imagens/produto1/produto1.jpg" alt="Produto 1" class="imagem-pequena">
+                    <img src="imagens/produto1/produto1-2.jpg" alt="Produto 1" class="imagem-pequena">
+                    <img src="imagens/produto1/produto1-3.jpg" alt="Produto 1" class="imagem-pequena">
+                </div>
+                <h3>Ecoabg</h3>
+                <p>R$ 50,00</p>
+                <p>Descrição</p>
+                <a href="#" class="whatsapp-btn" data-produto="Produto 1" data-preco="R$ 50,00">Comprar no WhatsApp</a>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="produto-card">
+                <h3>Produto 2</h3>
+                <p>R$ 70,00</p>
+                <div class="imagens-produto">
+                    <img src="imagens/produto2/produto2.jpg" alt="Produto 2" class="imagem-pequena">
+                    <img src="imagens/produto2/produto2-2.jpg" alt="Produto 2" class="imagem-pequena">
+                    <img src="imagens/produto2/produto2-3.jpg" alt="Produto 2" class="imagem-pequena">
+                </div>
+                <a href="#" class="whatsapp-btn" data-produto="Produto 2" data-preco="R$ 70,00">Comprar no WhatsApp</a>
+            </div>
+
+            <!-- Adicione mais produtos aqui -->
+        </div>
+    </main>
+
+    <!-- Lightbox para exibir imagens em tamanho maior -->
+    <div id="lightbox" class="lightbox">
+        <span class="fechar-lightbox">&times;</span>
+        <img class="lightbox-conteudo" id="lightbox-imagem">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
